@@ -9,10 +9,12 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-const Text = styled.h1`
+const Text = styled.a`
   font-size: 1em;
   text-align: center;
-  margin-right: 8px;
+  margin-right: 16px;
+  color: black;
+  text-decoration: none;
 `;
 
 const Title = styled.div`
@@ -28,11 +30,11 @@ export default function Header(props) {
   return (
     <Wrapper>
       <Title>
-        <Text>Surachok's Profile</Text>
+        <Text href="/home">Surachok's Profile</Text>
       </Title>
       <Menu>
         {props.children.map((menu) => (
-          <Text>{menu}</Text>
+          <Text href={`/${menu.toLowerCase()}`}>{menu}</Text>
         ))}
       </Menu>
     </Wrapper>

@@ -5,7 +5,7 @@ export default function Home() {
   const [menuList] = useState([
     "Profile",
     "Education",
-    "Work Experience",
+    "Experience",
     "Contact",
   ]);
 
