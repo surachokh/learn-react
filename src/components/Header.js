@@ -7,15 +7,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 
-const animations = keyframes`
-    0% {
-      width: 40%;
-    }
-    100% {
-        width: 100%;
-    }
-`;
-
 const Text = styled.a`
   font-size: 32px;
   font-weight: 700;
@@ -28,9 +19,6 @@ const Text = styled.a`
 const Title = styled.div`
   text-align: center;
   width: 100%;
-  animation-name: ${animations};
-  animation-duration: 3.5s;
-  animation-iteration-count: 1;
 `;
 
 export default function Header() {
