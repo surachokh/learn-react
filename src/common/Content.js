@@ -35,3 +35,9 @@ export const Skooldio = [
   "Develop features on Skooldio Classroom Web",
   "Maintenance Skooldio Web Application",
 ];
+
+export const Contact = [
+  "Mobile : 081 - 396 8689",
+  "E-mail : surachok.h@gmail.com",
+  "Address : 16 Chaiwaree Rd Ranod, Songkhla 90140",
+];
