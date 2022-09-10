@@ -30,7 +30,7 @@ export default function Header(props) {
   return (
     <Wrapper>
       <Title>
-        <Text href="/home">Surachok's Profile</Text>
+        <Text href="/">Surachok's Profile</Text>
       </Title>
       <Menu>
         {props.children.map((menu) => (
