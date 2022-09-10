@@ -1,42 +1,44 @@
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 
 const Wrapper = styled.div`
-  background-color: palevioletred;
-  opacity: 0.5;
   padding: 1em;
   display: flex;
   justify-content: space-between;
 `;
 
+const animations = keyframes`
+    0% {
+      width: 40%;
+    }
+    100% {
+        width: 100%;
+    }
+`;
+
 const Text = styled.a`
-  font-size: 1em;
+  font-size: 32px;
+  font-weight: 700;
   text-align: center;
   margin-right: 16px;
-  color: black;
+  color: #098100;
   text-decoration: none;
 `;
 
 const Title = styled.div`
-  display: flex;
+  text-align: center;
+  width: 100%;
+  animation-name: ${animations};
+  animation-duration: 3.5s;
+  animation-iteration-count: 1;
 `;
 
-const Menu = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-`;
-
-export default function Header(props) {
+export default function Header() {
   return (
     <Wrapper>
       <Title>
         <Text href="/">Surachok's Profile</Text>
       </Title>
-      <Menu>
-        {props.children.map((menu) => (
-          <Text href={`/${menu.toLowerCase()}`}>{menu}</Text>
-        ))}
-      </Menu>
     </Wrapper>
   );
 }
