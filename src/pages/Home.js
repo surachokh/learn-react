@@ -1,17 +1,9 @@
-import React, { useState } from "react";
-import Header from "../components/Header";
+import React from "react";
 
 export default function Home() {
-  const [menuList] = useState([
-    "Profile",
-    "Education",
-    "Experience",
-    "Contact",
-  ]);
-
   return (
     <>
-      <Header>{menuList}</Header>
+      <h1>This is Home</h1>
     </>
   );
 }

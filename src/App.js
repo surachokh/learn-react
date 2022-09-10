@@ -1,8 +1,18 @@
-import React from 'react'
-import Home from './pages/Home'
+import React, { useState } from "react";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
 export default function App() {
+  const [menuList] = useState([
+    "Profile",
+    "Education",
+    "Experience",
+    "Contact",
+  ]);
   return (
-    <Home />
-  )
+    <>
+      <Header>{menuList}</Header>
+      <Home />
+    </>
+  );
 }
