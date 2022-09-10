@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {
+  Contact,
   EducationDetail,
   FrameworkSkillContent,
   KBTGDetail,
@@ -9,36 +10,31 @@ import {
   SCBTechX,
   Skooldio,
   SoftSkillContent,
-  Work,
 } from "../common/Content";
 import Card from "../components/Card";
+import ContactCard from "../components/ContactCard";
 import ListCard from "../components/ListCard";
-import "./Home.css";
+import ParagraphCard from "../components/ParagraphCard";
 
 const SkillWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-bottom: 16px;
-  flex-grow: 1;
 `;
 
 const WorkWrapper = styled(SkillWrapper)`
   flex-direction: column;
   text-align: center;
   padding: 24px;
-  border: 1px solid #dddddd;
+  border: 1px solid #eee;
   border-radius: 16px;
   box-shadow: 3px 3px 10px #eeeeee;
 `;
 
 const Vl = styled.div`
   border-left: 1px solid #ccc;
-  height: 200px;
+  height: 400px;
 `;
-
-// const HandleClick = () => {
-//   window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-// };
 
 export default function Home() {
   return (
@@ -58,11 +54,10 @@ export default function Home() {
         <ListCard border contents={SoftSkillContent} title="Soft Skill" />
       </SkillWrapper>
       <SkillWrapper>
-        <ListCard
-          title="Bachelor of Engineering"
+        <ParagraphCard
           img="graduated_picture.jpeg"
           contents={EducationDetail}
-          border
+          title="Bachelor of Engineering"
         />
       </SkillWrapper>
       <WorkWrapper>
@@ -77,13 +72,14 @@ export default function Home() {
           Work Experiences
         </div>
         <SkillWrapper>
-          <ListCard contents={KBTGDetail} title="KBTG" />
+          <ListCard contents={KBTGDetail} title="KBTG" img="KBTG.png" />
           <Vl />
-          <ListCard contents={SCBTechX} title="SCB Tech X" />
+          <ListCard contents={SCBTechX} title="SCB Tech X" img="scb.jpeg" />
           <Vl />
-          <ListCard contents={Skooldio} title="Skooldio" />
+          <ListCard contents={Skooldio} title="Skooldio" img="skooldio.png" />
         </SkillWrapper>
       </WorkWrapper>
+      <ContactCard img="portrait.jpg" contents={Contact} title="Contact Me" />
     </>
   );
 }
