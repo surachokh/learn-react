@@ -7,10 +7,11 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  border: ${(props) => (props.border ? "1px solid #dddddd" : "")};
+  border: ${(props) => (props.border ? "1px solid #eee" : "")};
   border-radius: 16px;
   padding: 24px;
   box-shadow: ${(props) => (props.border ? "3px 3px 10px #eeeeee" : "")};
+  flex-basis: min-content;
   flex-grow: 1;
   margin-left: ${(props) => (props.border ? "16px" : "")};
   &:first-child {
@@ -20,7 +21,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   font-size: ${(props) => (props.border ? "24px" : "20px")};
-  margin-bottom: 16px;
+  margin: 16px 0px;
   color: #098100;
   font-weight: 600;
 `;
@@ -37,7 +38,7 @@ const ContentWrapper = styled.div`
 export default function ListCard(props) {
   return (
     <Wrapper border={props.border}>
-      {props.img && <ImageCover>{props.img}</ImageCover>}
+      {props.img && <ImageCover size="120px">{props.img}</ImageCover>}
       <Title border={props.border}>{props.title}</Title>
       <ContentWrapper border={props.border}>
         {props.contents.map((content) =>
